@@ -23,6 +23,7 @@ const Header = () => {
                 <div className={styles.upperHeaderContainer}>
                     <div className={styles.hamburger} onClick={() => {
                         setIsVisible(!isVisible);
+
                     }}>
                         <div className="line"></div>
                         <div className="line"></div>
@@ -46,15 +47,15 @@ const Header = () => {
 
                     <HeaderIconsContainer />
                 </div>
-
-                {!isVisible && (<nav className={styles.navContainer}>
+                {isVisible && (<nav className={styles.navContainer}>
                     <div className={styles.crossIcon} onClick={() => {
                         setIsVisible(!isVisible);
                     }}></div>
+
                     <ul className={styles.navList}>
                         <li className={styles.dropdownItem}>
                             <div className={`${styles.navLink} ${styles.dropdownButton}`} onClick={async () => {
-                                await router.push('/store');
+                                await router.push('/');
                                 setIsVisible(false);
                             }}>
                                 Stores <Image src={arrow} width={20} height={20} alt='arrow' className={styles.dropdownArrow} />
@@ -162,10 +163,7 @@ const Header = () => {
                             await router.push('/cellphones');
                             setIsVisible(false);
                         }}>
-                            <p onClick={async () => {
-                                await router.push('/');
-                                setIsVisible(false)
-                            }} className={`${styles.navLink} ${styles.dropdownButton}`}>Support</p>
+                            <p className={`${styles.navLink} ${styles.dropdownButton}`}>Support</p>
                         </li>
                     </ul>
 
@@ -173,10 +171,8 @@ const Header = () => {
                 </nav>)}
 
             </header >
-          
+
         </>
-
-
     )
 }
 
