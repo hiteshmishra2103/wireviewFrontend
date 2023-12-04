@@ -2,7 +2,8 @@
   display: none;
 }
 
-.headerContainer {
+.headerContainer,
+.pcHeaderContainer {
   height: 8rem;
 }
 .upperHeaderContainer {
@@ -211,8 +212,7 @@
 /* max:360px */
 
 @media (max-width: 768px) {
-  .headerContainer {
-  }
+  
   .dropdownArrow {
     display: none;
   }

@@ -7,6 +7,7 @@
   max-width: 350px;
   /* width: 1fr; */
   max-height: 300px;
+  cursor: pointer;
 }
 
 .header__product__card__container img {
@@ -57,20 +58,23 @@
 
 .Collections__Card__Container {
   box-sizing: border-box;
-  
+
   padding: 50px;
 }
 
 .Collections__Card__Title {
-  display: flex;
+  /* display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  margin-bottom: 50px;
+  margin-bottom: 50px; */
 }
 
 .title {
   font-size: 2.5rem;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 4rem;
 }
 
 .line {
@@ -81,9 +85,12 @@
 }
 
 .Collections__card__group {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 /* /////////////////////Collection grid card///////////////////////// */

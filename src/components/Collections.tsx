@@ -16,10 +16,10 @@ const Collections = () => {
                 <hr className={styles.line} />
             </div>
             <div className={styles.Collections__card__group}>
-                <CollectionsCard Name="Wireview Premium Watch" quantity={40} imgUrl={watch} alt="Wireview Premium Watch" />
-                <CollectionsCard Name="Computer & Laptops" quantity={8} imgUrl={catComputers} alt="Computer & Laptops" />
-                <CollectionsCard Name="Cellphone" quantity={5} imgUrl={mobile} alt="Cellphone" />
-                <CollectionsCard Name="Accessories" quantity={16} imgUrl={headPhone} alt="Accessories" />
+                <CollectionsCard Name="Wireview Premium Watch" quantity={40} imgUrl={watch} alt="Wireview Premium Watch" href={'/watch'} />
+                <CollectionsCard Name="Computer & Laptops" quantity={8} imgUrl={catComputers} alt="Computer & Laptops" href={'/computer'}/>
+                <CollectionsCard Name="Cellphone" quantity={5} imgUrl={mobile} alt="Cellphone" href={'/cellphones'} />
+                <CollectionsCard Name="Accessories" quantity={16} imgUrl={headPhone} alt="Accessories" href={'/accessories'} />
             </div>
         </div>
     )
