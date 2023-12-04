@@ -262,4 +262,9 @@
   border: 1px solid red;
 }
 
-
+@media (max-width: 768px) {
+  .center {
+    width: 90%;
+  }
+  
+}
