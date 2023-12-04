@@ -131,10 +131,10 @@ const AddProduct = () => {
                 thumbnailImage.type === 'image/svg') {
                 const image = new FormData();
                 image.append('file', thumbnailImage);
-                image.append("cloud_name", "drzwpn4ub");
-                image.append('upload_preset', 'tvhygeek');
+                image.append("cloud_name", process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME);
+                image.append('upload_preset', process.env.NEXT_PUBLIC_UPLOAD_PRESET);
                 console.log("Making request to cloudinary")
-                const response = await fetch("https://api.cloudinary.com/v1_1/drzwpn4ub/upload", {
+                const response = await fetch(`https://api.cloudinary.com/v1_1/${NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/upload`, {
                     method: "POST",
                     body: image
                 });
