@@ -169,112 +169,97 @@ const Header = () => {
 
 
                 </nav>)}
-
-            </header >
-
-            <header className={styles.pcHeaderContainer}>
-                {/* hamburger login logo search cart */}
-                <div className={styles.pcUpperHeaderContainer}>
-
-                    <div className={styles.logoContainer}>
-                        <Link href='/'>
-                            <Image className={styles.logo}
-                                src={logo}
-                                alt="Wireview logo"
-                                width={100}
-                                height={100}
-                            />
-                        </Link>
-                    </div>
-
-                    <SearchBar />
-
-                    <HeaderIconsContainer />
-                </div>
                 <nav className={styles.pcNavContainer}>
-                    <ul className={styles.pcNavList}>
-                        <li className={styles.pcDropdownItem}>
-                            <div className={`${styles.pcNavLink} ${styles.pcDropdownButton}`} >
-                                Stores <Image src={arrow} width={20} height={20} alt='arrow' className={styles.pcDropdownArrow} />
-                            </div>
-                            <div className={`${styles.pcDropdownContainer} ${styles.pcFirst}`}>
-                                <div className={styles.pcDropdownGroup}>
+                    <div className={styles.crossIcon} onClick={() => {
+                        setIsVisible(!isVisible);
+                    }}></div>
 
-                                    <span className={styles.pcDropdownTitle}>Shop</span>
-                                    <ul className={styles.pcDropdownList}>
+                    <ul className={styles.navList}>
+                        <li className={styles.dropdownItem}>
+                            <div className={`${styles.navLink} ${styles.dropdownButton}`} onClick={async () => {
+                                await router.push('/store');
+                                setIsVisible(false);
+                            }}>
+                                Stores <Image src={arrow} width={20} height={20} alt='arrow' className={styles.dropdownArrow} />
+                            </div>
+                            <div className={`${styles.dropdownContainer} ${styles.first}`}>
+                                <div className={styles.dropdownGroup}>
+
+                                    <span className={styles.dropdownTitle}>Shop</span>
+                                    <ul className={styles.dropdownList}>
                                         <li>
-                                            <Link href='/' className={`${styles.pcNavLink} ${styles.pcDropdownLink}`}>Shop The Latest</Link>
+                                            <Link href='/' className={`${styles.navLink} ${styles.dropdownLink}`}>Shop The Latest</Link>
                                         </li>
                                         <li>
-                                            <Link href={`/computer`} className={`${styles.pcNavLink} ${styles.pcDropdownLink}`} >
+                                            <Link href={`/computer`} className={`${styles.navLink} ${styles.dropdownLink}`} >
                                                 Computer & Tablet
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href={`/cellphones`} className={`${styles.pcNavLink} ${styles.pcDropdownLink}`}>
+                                            <Link href={`/cellphones`} className={`${styles.navLink} ${styles.dropdownLink}`}>
                                                 Cellphone
                                             </Link>
                                         </li>
                                         <li>
-                                            <a href={`/accessories`} className={`${styles.pcNavLink} ${styles.pcDropdownLink}`}>
+                                            <a href={`/accessories`} className={`${styles.navLink} ${styles.dropdownLink}`}>
                                                 Accessories
                                             </a>
                                         </li>
                                         <li>
-                                            <Link href={`/watch`} className={`${styles.pcNavLink} ${styles.pcDropdownLink}`}>Woodstock Watch</Link>
+                                            <Link href={`/watch`} className={`${styles.navLink} ${styles.dropdownLink}`}>Woodstock Watch</Link>
                                         </li>
                                     </ul>
                                 </div>
-                                <div className={styles.pcDropdownGroup}>
-                                    <span className={styles.pcDropdownTitle}>Featured</span>
-                                    <ul className={styles.pcDropdownList}>
+                                <div className={styles.dropdownGroup}>
+                                    <span className={styles.dropdownTitle}>Featured</span>
+                                    <ul className={styles.dropdownList}>
                                         <li>
-                                            <a href="" className={`${styles.pcNavLink} ${styles.pcDropdownLink}`}>Audio & Video</a>
+                                            <a href="" className={`${styles.navLink} ${styles.dropdownLink}`}>Audio & Video</a>
                                         </li>
                                         <li>
-                                            <a href="" className={`${styles.pcNavLink} ${styles.pcDropdownLink}`}
+                                            <a href="" className={`${styles.navLink} ${styles.dropdownLink}`}
                                             >Cellphones & Accessories</a                                        >
                                         </li>
                                         <li>
-                                            <Link href={`/watch`} className={`${styles.pcNavLink} ${styles.pcDropdownLink}`}>Woodstock Watch Premium</Link>
+                                            <Link href={`/watch`} className={`${styles.navLink} ${styles.dropdownLink}`}>Woodstock Watch Premium</Link>
 
                                         </li>
                                     </ul>
                                 </div>
-                                <div className={styles.pcDropdownGroup}>
-                                    <span className={styles.pcDropdownTitle}>Bestseller</span>
-                                    <ul className={styles.pcDropdownList}>
+                                <div className={styles.dropdownGroup}>
+                                    <span className={styles.dropdownTitle}>Bestseller</span>
+                                    <ul className={styles.dropdownList}>
                                         <li>
-                                            <a href="/computer" className={`${styles.pcNavLink} ${styles.pcDropdownLink}`}>Laptops</a>
+                                            <a href="/computer" className={`${styles.navLink} ${styles.dropdownLink}`}>Laptops</a>
                                         </li>
                                         <li>
-                                            <a href="/computer" className={`${styles.pcNavLink} ${styles.pcDropdownLink}`}> Gaming Laptops</a>
+                                            <a href="/computer" className={`${styles.navLink} ${styles.dropdownLink}`}> Gaming Laptops</a>
                                         </li>
                                         <li>
-                                            <a href="/computer" className={`${styles.pcNavLink} ${styles.pcDropdownLink}`}>Gaming Desktops </a>
+                                            <a href="/computer" className={`${styles.navLink} ${styles.dropdownLink}`}>Gaming Desktops </a>
                                         </li>
                                         <li>
-                                            <a href="/watch" className={`${styles.pcNavLink} ${styles.pcDropdownLink}`}>Watch </a>
+                                            <a href="/watch" className={`${styles.navLink} ${styles.dropdownLink}`}>Watch </a>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                         </li>
-                        <li className={styles.pcDropdownItem}>
-                            <div className={`${styles.pcNavLink} ${styles.pcDropdownButton}`} onClick={async () => {
+                        <li className={styles.dropdownItem}>
+                            <div className={`${styles.navLink} ${styles.dropdownButton}`} onClick={async () => {
                                 await router.push('/watch');
-
+                                setIsVisible(false);
                             }}>
-                                Watch <Image src={arrow} width={20} height={20} alt='arrow' className={styles.pcDropdownArrow} />
+                                Watch <Image src={arrow} width={20} height={20} alt='arrow' className={styles.dropdownArrow} />
                             </div>
-                            <div className={`${styles.pcDropdownContainer} ${styles.pcSecond}`}>
-                                <div className={styles.pcDropdownGroup}>
-                                    <ul className={styles.pcDropdownList}>
+                            <div className={`${styles.dropdownContainer} ${styles.second}`}>
+                                <div className={styles.dropdownGroup}>
+                                    <ul className={styles.dropdownList}>
                                         <li>
-                                            <a href="/watch" className={`${styles.pcNavLink} ${styles.pcDropdownLink}`}> Explore Watch</a>
+                                            <a href="/watch" className={`${styles.navLink} ${styles.dropdownLink}`}> Explore Watch</a>
                                         </li>
                                         <li>
-                                            <a href="/accessories" className={`${styles.pcNavLink} ${styles.pcDropdownLink}`}>
+                                            <a href="/accessories" className={`${styles.navLink} ${styles.dropdownLink}`}>
                                                 Accessories
                                             </a>
                                         </li>
@@ -283,24 +268,24 @@ const Header = () => {
                             </div>
                         </li>
 
-                        <li className={styles.pcDropdownItem} onClick={async () => {
+                        <li className={styles.dropdownItem} onClick={async () => {
                             await router.push('/accessories');
-
+                            setIsVisible(false);
                         }}>
-                            <p className={`${styles.pcNavLink} ${styles.pcDropdownButton}`}>Accessories</p>
+                            <p className={`${styles.navLink} ${styles.dropdownButton}`}>Accessories</p>
                         </li>
-                        <li className={styles.pcDropdownItem} onClick={async () => {
+                        <li className={styles.dropdownItem} onClick={async () => {
                             await router.push('/cellphones');
-
+                            setIsVisible(false);
                         }}>
-                            <p className={`${styles.pcNavLink} ${styles.pcDropdownButton}`}>
+                            <p className={`${styles.navLink} ${styles.dropdownButton}`}>
                                 Cellphones</p>
                         </li>
-                        <li className={styles.pcDropdownItem} onClick={async () => {
+                        <li className={styles.dropdownItem} onClick={async () => {
                             await router.push('/cellphones');
-
+                            setIsVisible(false);
                         }}>
-                            <p className={`${styles.pcNavLink} ${styles.pcDropdownButton}`}>Support</p>
+                            <p className={`${styles.navLink} ${styles.dropdownButton}`}>Support</p>
                         </li>
                     </ul>
 

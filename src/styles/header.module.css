@@ -4,10 +4,9 @@
 
 .headerContainer {
   height: 8rem;
-  display: none;
 }
 .upperHeaderContainer {
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: space-between;
   padding-right: 50px;
@@ -373,6 +372,9 @@
   .pcHeaderContainer {
     display: none;
   }
+  .pcNavContainer {
+    display: none;
+  }
 }
 
 /* Add media query for screens smaller than 480px */
@@ -385,179 +387,7 @@
 
 /* ===================================Pc header styles===================================== */
 
-.pcHeaderContainer {
-  height: 8rem;
-}
-.pcUpperHeaderContainer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-right: 50px;
-  padding-left: 32px;
-  position: relative;
-}
-
-.pcHeaderIconsContainer {
-  display: flex;
-  align-items: center;
-  width: 25%;
-  justify-content: space-between;
-}
-
-.pcCartContainer {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  margin-left: 0.5rem;
-  position: relative;
-}
-
-.pcQuantity {
-  position: absolute;
-  top: -10%;
-  right: -10%;
-  background-color: red;
-  color: white;
-  border-radius: 50%;
-  padding: 0.2rem;
-  font-size: 0.8rem;
-}
-
 /* Navigation styles */
 .pcNavContainer {
   padding-top: 0.5rem;
-}
-
-.pcDropdownLink {
-  font-weight: 400;
-}
-
-.pcNavLink,
-.pcDropdownLink {
-  position: relative;
-  display: inline-block;
-}
-
-.pcNavLink::after,
-.pcDropdownLink::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 0.8px;
-  bottom: 0;
-  left: 0;
-  background-color: #000; /* change this to the color you want for the underline */
-  transform: scaleX(0);
-  transform-origin: bottom left;
-  transition: transform 0.25s ease-out;
-}
-
-.pcNavLink:hover::after,
-.pcDropdownLink.pcNavLink:hover::after {
-  transform: scaleX(1);
-}
-
-.pcDropdownGroup {
-  display: grid;
-  gap: 1rem;
-}
-
-.pcNavList {
-  display: flex;
-  justify-content: space-between;
-  padding-inline: 50px;
-  font-weight: var(--font-weight-medium);
-  font-size: var(--font-small);
-  overflow-y: auto;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  align-items: center;
-}
-.pcDropdownButton {
-  display: flex;
-  align-items: center;
-}
-
-.pcStgroup {
-  width: 20%;
-  display: flex;
-  justify-content: space-between;
-  font-size: var(--fontsmall);
-  font-weight: 400;
-  align-items: center;
-}
-.pcStgroup li {
-  display: flex;
-  align-items: center;
-}
-
-.pcDropdownItem > .pcDropdownContainer {
-  z-index: 100;
-  background-color: white;
-  max-width: 1120px;
-  cursor: pointer;
-  padding: 3.2rem;
-  border-radius: 0.6rem;
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
-  transition: top 0.4s, opacity 0.3s;
-}
-
-.pcDropdownItem:hover > .pcDropdownContainer {
-  opacity: 1;
-  pointer-events: all;
-}
-.pcFirst {
-  width: 80%;
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.pcDropdownItem {
-  cursor: pointer;
-}
-
-.pcDropdownItem .pcDropdownArrow {
-  transition: transform 0.2s;
-}
-
-.pcDropdownItem:hover .pcDropdownArrow {
-  transform: rotate(180deg);
-}
-
-/* ============-------------search bar css-------------------======================== */
-.pcSearch {
-  display: flex;
-  align-items: center;
-  /* border: 10px solid red; */
-  border-radius: 6px;
-  background-color: rgb(250, 250, 250);
-  padding: 35px;
-  height: 70px;
-}
-.pcSearchBar {
-  width: 40%;
-}
-.pcSearch input {
-  background: transparent;
-  flex: 1;
-  border: 0;
-  outline: null;
-}
-
-.pcSearchBar .pcSearch input:focus {
-  outline: none !important ;
-}
-.pcCompare {
-  margin-left: 0.5rem;
-  cursor: pointer;
-}
-
-/* ============-------------buttons css-------------------======================== */
-
-.pcLoginBtn {
-  width: 100% !important;
-  min-width: fit-content !important;
 }
