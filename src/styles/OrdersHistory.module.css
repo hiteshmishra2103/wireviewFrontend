@@ -66,7 +66,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-
 }
 
 .dashboardContentOrdersContainerOrder {
@@ -130,6 +129,24 @@
   color: #333;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  background-color: #f8f9fa;
+  font-family: Arial, sans-serif;
+}
+
+.title {
+  font-size: 2.5em;
+  color: #dc3545;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
 @media (max-width: 768px) {
   .dashboardParentContainer {
     flex-direction: column;
@@ -160,12 +177,11 @@
     text-align: center;
   }
 
-  .productImage{
+  .productImage {
     width: 100%;
-text-align: center;
-object-fit:contain;
+    text-align: center;
+    object-fit: contain;
   }
-  
 
   .productDetailsContainer {
     display: flex;

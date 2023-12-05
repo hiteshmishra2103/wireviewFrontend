@@ -64,7 +64,7 @@ const ProductDetails = () => {
     };
 
     const response = await fetch(
-      `https://ill-lingerie-bass.cyclic.app//create-checkout-session`,
+      `https://ill-lingerie-bass.cyclic.app/create-checkout-session`,
       {
         method: "POST",
         headers: {

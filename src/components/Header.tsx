@@ -55,7 +55,7 @@ const Header = () => {
                     <ul className={styles.navList}>
                         <li className={styles.dropdownItem}>
                             <div className={`${styles.navLink} ${styles.dropdownButton}`} onClick={async () => {
-                                await router.push('/');
+                                await router.push('/store');
                                 setIsVisible(false);
                             }}>
                                 Stores <Image src={arrow} width={20} height={20} alt='arrow' className={styles.dropdownArrow} />
@@ -171,6 +171,144 @@ const Header = () => {
                 </nav>)}
 
             </header >
+
+            <header className={styles.pcHeaderContainer}>
+                {/* hamburger login logo search cart */}
+                <div className={styles.pcUpperHeaderContainer}>
+
+                    <div className={styles.logoContainer}>
+                        <Link href='/'>
+                            <Image className={styles.logo}
+                                src={logo}
+                                alt="Wireview logo"
+                                width={100}
+                                height={100}
+                            />
+                        </Link>
+                    </div>
+
+                    <SearchBar />
+
+                    <HeaderIconsContainer />
+                </div>
+                <nav className={styles.pcNavContainer}>
+                    <ul className={styles.pcNavList}>
+                        <li className={styles.pcDropdownItem}>
+                            <div className={`${styles.pcNavLink} ${styles.pcDropdownButton}`} >
+                                Stores <Image src={arrow} width={20} height={20} alt='arrow' className={styles.pcDropdownArrow} />
+                            </div>
+                            <div className={`${styles.pcDropdownContainer} ${styles.pcFirst}`}>
+                                <div className={styles.pcDropdownGroup}>
+
+                                    <span className={styles.pcDropdownTitle}>Shop</span>
+                                    <ul className={styles.pcDropdownList}>
+                                        <li>
+                                            <Link href='/' className={`${styles.pcNavLink} ${styles.pcDropdownLink}`}>Shop The Latest</Link>
+                                        </li>
+                                        <li>
+                                            <Link href={`/computer`} className={`${styles.pcNavLink} ${styles.pcDropdownLink}`} >
+                                                Computer & Tablet
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href={`/cellphones`} className={`${styles.pcNavLink} ${styles.pcDropdownLink}`}>
+                                                Cellphone
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <a href={`/accessories`} className={`${styles.pcNavLink} ${styles.pcDropdownLink}`}>
+                                                Accessories
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <Link href={`/watch`} className={`${styles.pcNavLink} ${styles.pcDropdownLink}`}>Woodstock Watch</Link>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div className={styles.pcDropdownGroup}>
+                                    <span className={styles.pcDropdownTitle}>Featured</span>
+                                    <ul className={styles.pcDropdownList}>
+                                        <li>
+                                            <a href="" className={`${styles.pcNavLink} ${styles.pcDropdownLink}`}>Audio & Video</a>
+                                        </li>
+                                        <li>
+                                            <a href="" className={`${styles.pcNavLink} ${styles.pcDropdownLink}`}
+                                            >Cellphones & Accessories</a                                        >
+                                        </li>
+                                        <li>
+                                            <Link href={`/watch`} className={`${styles.pcNavLink} ${styles.pcDropdownLink}`}>Woodstock Watch Premium</Link>
+
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div className={styles.pcDropdownGroup}>
+                                    <span className={styles.pcDropdownTitle}>Bestseller</span>
+                                    <ul className={styles.pcDropdownList}>
+                                        <li>
+                                            <a href="/computer" className={`${styles.pcNavLink} ${styles.pcDropdownLink}`}>Laptops</a>
+                                        </li>
+                                        <li>
+                                            <a href="/computer" className={`${styles.pcNavLink} ${styles.pcDropdownLink}`}> Gaming Laptops</a>
+                                        </li>
+                                        <li>
+                                            <a href="/computer" className={`${styles.pcNavLink} ${styles.pcDropdownLink}`}>Gaming Desktops </a>
+                                        </li>
+                                        <li>
+                                            <a href="/watch" className={`${styles.pcNavLink} ${styles.pcDropdownLink}`}>Watch </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li className={styles.pcDropdownItem}>
+                            <div className={`${styles.pcNavLink} ${styles.pcDropdownButton}`} onClick={async () => {
+                                await router.push('/watch');
+
+                            }}>
+                                Watch <Image src={arrow} width={20} height={20} alt='arrow' className={styles.pcDropdownArrow} />
+                            </div>
+                            <div className={`${styles.pcDropdownContainer} ${styles.pcSecond}`}>
+                                <div className={styles.pcDropdownGroup}>
+                                    <ul className={styles.pcDropdownList}>
+                                        <li>
+                                            <a href="/watch" className={`${styles.pcNavLink} ${styles.pcDropdownLink}`}> Explore Watch</a>
+                                        </li>
+                                        <li>
+                                            <a href="/accessories" className={`${styles.pcNavLink} ${styles.pcDropdownLink}`}>
+                                                Accessories
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li className={styles.pcDropdownItem} onClick={async () => {
+                            await router.push('/accessories');
+
+                        }}>
+                            <p className={`${styles.pcNavLink} ${styles.pcDropdownButton}`}>Accessories</p>
+                        </li>
+                        <li className={styles.pcDropdownItem} onClick={async () => {
+                            await router.push('/cellphones');
+
+                        }}>
+                            <p className={`${styles.pcNavLink} ${styles.pcDropdownButton}`}>
+                                Cellphones</p>
+                        </li>
+                        <li className={styles.pcDropdownItem} onClick={async () => {
+                            await router.push('/cellphones');
+
+                        }}>
+                            <p className={`${styles.pcNavLink} ${styles.pcDropdownButton}`}>Support</p>
+                        </li>
+                    </ul>
+
+
+                </nav>
+
+            </header >
+
 
         </>
     )
