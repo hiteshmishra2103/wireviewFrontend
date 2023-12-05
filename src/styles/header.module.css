@@ -1,13 +1,12 @@
 .crossIcon {
   display: none;
 }
-
 .headerContainer {
   height: 8rem;
-  display: none;
+  /* display: none; */
 }
 .upperHeaderContainer {
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: space-between;
   padding-right: 50px;
@@ -22,7 +21,13 @@
 }
 
 .headerIconsContainer {
-  display: flex;
+  display: flex !important;
+  align-items: center;
+  width: 25%;
+  justify-content: space-between;
+}
+.pcHeaderIconsContainer {
+  display: flex !important;
   align-items: center;
   width: 25%;
   justify-content: space-between;
@@ -96,7 +101,6 @@
   overflow-y: auto;
   overflow-x: hidden;
   overflow-y: scroll;
-  height: 100%;
   align-items: center;
 }
 .dropdownButton {
@@ -183,7 +187,8 @@
 
 /* ============-------------buttons css-------------------======================== */
 
-.loginBtn {
+.loginBtn,
+.pcLoginBtn {
   width: 100% !important;
   min-width: fit-content !important;
 }
@@ -206,6 +211,10 @@
   color: white;
   width: 100%;
   transition: all 0.5s ease;
+}
+.signupBtn {
+  width: 100% !important;
+  min-width: fit-content !important;
 }
 /* Add media query for screens smaller than 768px */
 
@@ -370,7 +379,7 @@
   .crossIcon::after {
     transform: rotate(-45deg);
   }
-  .pcHeaderContainer {
+  .pcNavContainer {
     display: none;
   }
 }

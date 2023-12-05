@@ -10,6 +10,7 @@ import HeaderIconsContainer from './HeaderIconsContainer';
 import SearchBar from './SearchBar';
 import { useState } from 'react';
 import { useRouter } from 'next/dist/client/router';
+import PcHeaderIcons from './PcHeaderIcons';
 
 
 const Header = () => {
@@ -170,27 +171,6 @@ const Header = () => {
 
                 </nav>)}
 
-            </header >
-
-            <header className={styles.pcHeaderContainer}>
-                {/* hamburger login logo search cart */}
-                <div className={styles.pcUpperHeaderContainer}>
-
-                    <div className={styles.logoContainer}>
-                        <Link href='/'>
-                            <Image className={styles.logo}
-                                src={logo}
-                                alt="Wireview logo"
-                                width={100}
-                                height={100}
-                            />
-                        </Link>
-                    </div>
-
-                    <SearchBar />
-
-                    <HeaderIconsContainer />
-                </div>
                 <nav className={styles.pcNavContainer}>
                     <ul className={styles.pcNavList}>
                         <li className={styles.pcDropdownItem}>
@@ -308,6 +288,7 @@ const Header = () => {
                 </nav>
 
             </header >
+
 
 
         </>

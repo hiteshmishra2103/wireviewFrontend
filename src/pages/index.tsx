@@ -31,7 +31,7 @@ export default function Home(props) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch(`https://ill-lingerie-bass.cyclic.app//category/computer`);
+  const res = await fetch(`https://ill-lingerie-bass.cyclic.app/category/computer`);
   const data = await res.json();
   const products = data.products.slice(0, 4);
   console.log(products)
